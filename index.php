@@ -43,12 +43,10 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 
 $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 
-$app->error(function (\Exception $e, $code) {
-    return new Response('We are sorry, but something went terribly wrong.');
-});
-
-$app->get('/', function() {
-    return 'Hello!';
+$app->get('/', function(Silex\Application $app) {
+    return $app['twig']->render('index.twig', array(
+        'name' => 'blarg'
+    ));
 })->bind('index');
 
 $app->post('/', function (Request $request) {
@@ -56,7 +54,9 @@ $app->post('/', function (Request $request) {
 });
 
 $app->get('/article/{id}', function (Silex\Application $app, $id) {
-    return 'Hello!';
+    return $app['twig']->render('article.twig', array(
+        'name' => 'blarg'
+    ));
 })->assert('id', '\d+')->bind('article');
 
 $app->run();
