@@ -1,9 +1,9 @@
 {
     "require": {
-        "doctrine/dbal": "2.2.*",
         "silex/silex": "1.0.*@dev",
         "symfony/twig-bridge": "2.1.*",
-        "twig/twig": ">=1.8,<2.0-dev"
+        "twig/twig": ">=1.8,<2.0-dev",
+        "marcw/buzz-service-provider": "dev-master"
     },
     "autoload": {
         "files": ["vendor/readability/ReadabilityProvider.php"]

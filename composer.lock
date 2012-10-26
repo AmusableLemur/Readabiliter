@@ -1,126 +1,93 @@
 {
-    "hash": "0a6d5dc954e959306f05c102a358baaf",
+    "hash": "d3deb5f28e5b8a1e90dc62af62d9dcb0",
     "packages": [
         {
-            "name": "doctrine/common",
-            "version": "2.2.3",
+            "name": "kriswallsmith/buzz",
+            "version": "v0.7",
             "source": {
                 "type": "git",
-                "url": "https://github.com/doctrine/common",
-                "reference": "2.2.3"
+                "url": "http://github.com/kriswallsmith/Buzz.git",
+                "reference": "v0.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/common/zipball/2.2.3",
-                "reference": "2.2.3",
+                "url": "https://github.com/kriswallsmith/Buzz/zipball/v0.7",
+                "reference": "v0.7",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2"
+                "php": ">=5.3.0"
             },
-            "time": "2012-08-29 01:04:14",
+            "suggest": {
+                "ext-curl": "*"
+            },
+            "time": "2012-06-25 12:01:38",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
                 "psr-0": {
-                    "Doctrine\\Common": "lib/"
+                    "Buzz": "lib/"
                 }
             },
             "license": [
-                "LGPL"
+                "MIT"
             ],
             "authors": [
                 {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com",
-                    "homepage": "http://www.jwage.com/"
-                },
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com",
-                    "homepage": "http://www.instaclick.com"
-                },
-                {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
-                    "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Johannes M. Schmitt",
-                    "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
-                    "role": "Developer of wrapped JMSSerializerBundle"
+                    "name": "Kris Wallsmith",
+                    "email": "kris.wallsmith@gmail.com",
+                    "homepage": "http://kriswallsmith.net/"
                 }
             ],
-            "description": "Common Library for Doctrine projects",
-            "homepage": "http://www.doctrine-project.org",
+            "description": "Lightweight HTTP client",
+            "homepage": "https://github.com/kriswallsmith/Buzz",
             "keywords": [
-                "collections",
-                "spl",
-                "eventmanager",
-                "annotations",
-                "persistence"
+                "curl",
+                "http client"
             ]
         },
         {
-            "name": "doctrine/dbal",
-            "version": "2.2.2",
+            "name": "marcw/buzz-service-provider",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/doctrine/dbal",
-                "reference": "2.2.2"
+                "url": "https://github.com/marcw/silex-buzz-extension.git",
+                "reference": "f698ac0259d55a0209b344ac9978f0d6107d920f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/doctrine/dbal/zipball/2.2.2",
-                "reference": "2.2.2",
+                "url": "https://github.com/marcw/silex-buzz-extension/zipball/f698ac0259d55a0209b344ac9978f0d6107d920f",
+                "reference": "f698ac0259d55a0209b344ac9978f0d6107d920f",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2",
-                "doctrine/common": ">=2.2.0,<=2.2.99"
+                "kriswallsmith/buzz": ">=0.6"
             },
-            "time": "2012-04-13 00:56:12",
+            "time": "1340705421",
             "type": "library",
-            "installation-source": "dist",
+            "installation-source": "source",
             "autoload": {
                 "psr-0": {
-                    "Doctrine\\DBAL": "lib/"
+                    "MarcW\\Silex\\Provider": "lib"
                 }
             },
             "license": [
-                "LGPL"
+                "MIT"
             ],
             "authors": [
                 {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com",
-                    "homepage": "http://www.jwage.com/"
-                },
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com",
-                    "homepage": "http://www.instaclick.com"
-                },
-                {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
-                    "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de"
+                    "name": "Marc Weistroff",
+                    "email": "marc@weistroff.net",
+                    "homepage": "http://marc.weistroff.net"
                 }
             ],
-            "description": "Database Abstraction Layer",
-            "homepage": "http://www.doctrine-project.org",
+            "description": "Silex ServiceProvider for Buzz Http Library",
+            "homepage": "https://github.com/marcw/silex-buzz-extension",
             "keywords": [
-                "database",
-                "persistence",
-                "dbal",
-                "queryobject"
+                "silex",
+                "buzz",
+                "service provider"
             ]
         },
         {
@@ -594,6 +561,7 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "silex/silex": 20
+        "silex/silex": 20,
+        "marcw/buzz-service-provider": 20
     }
 }

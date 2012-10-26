@@ -357,130 +357,6 @@
         ]
     },
     {
-        "name": "doctrine/common",
-        "version": "2.2.3",
-        "version_normalized": "2.2.3.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/doctrine/common",
-            "reference": "2.2.3"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://github.com/doctrine/common/zipball/2.2.3",
-            "reference": "2.2.3",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.2"
-        },
-        "time": "2012-08-29 01:04:14",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Doctrine\\Common": "lib/"
-            }
-        },
-        "license": [
-            "LGPL"
-        ],
-        "authors": [
-            {
-                "name": "Jonathan Wage",
-                "email": "jonwage@gmail.com",
-                "homepage": "http://www.jwage.com/"
-            },
-            {
-                "name": "Guilherme Blanco",
-                "email": "guilhermeblanco@gmail.com",
-                "homepage": "http://www.instaclick.com"
-            },
-            {
-                "name": "Roman Borschel",
-                "email": "roman@code-factory.org"
-            },
-            {
-                "name": "Benjamin Eberlei",
-                "email": "kontakt@beberlei.de"
-            },
-            {
-                "name": "Johannes M. Schmitt",
-                "email": "schmittjoh@gmail.com",
-                "homepage": "http://jmsyst.com",
-                "role": "Developer of wrapped JMSSerializerBundle"
-            }
-        ],
-        "description": "Common Library for Doctrine projects",
-        "homepage": "http://www.doctrine-project.org",
-        "keywords": [
-            "collections",
-            "spl",
-            "eventmanager",
-            "annotations",
-            "persistence"
-        ]
-    },
-    {
-        "name": "doctrine/dbal",
-        "version": "2.2.2",
-        "version_normalized": "2.2.2.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/doctrine/dbal",
-            "reference": "2.2.2"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://github.com/doctrine/dbal/zipball/2.2.2",
-            "reference": "2.2.2",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.2",
-            "doctrine/common": ">=2.2.0,<=2.2.99"
-        },
-        "time": "2012-04-13 00:56:12",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Doctrine\\DBAL": "lib/"
-            }
-        },
-        "license": [
-            "LGPL"
-        ],
-        "authors": [
-            {
-                "name": "Jonathan Wage",
-                "email": "jonwage@gmail.com",
-                "homepage": "http://www.jwage.com/"
-            },
-            {
-                "name": "Guilherme Blanco",
-                "email": "guilhermeblanco@gmail.com",
-                "homepage": "http://www.instaclick.com"
-            },
-            {
-                "name": "Roman Borschel",
-                "email": "roman@code-factory.org"
-            },
-            {
-                "name": "Benjamin Eberlei",
-                "email": "kontakt@beberlei.de"
-            }
-        ],
-        "description": "Database Abstraction Layer",
-        "homepage": "http://www.doctrine-project.org",
-        "keywords": [
-            "database",
-            "persistence",
-            "dbal",
-            "queryobject"
-        ]
-    },
-    {
         "name": "twig/twig",
         "version": "v1.10.3",
         "version_normalized": "1.10.3.0",
@@ -594,5 +470,96 @@
         ],
         "description": "Symfony Twig Bridge",
         "homepage": "http://symfony.com"
+    },
+    {
+        "name": "kriswallsmith/buzz",
+        "version": "v0.7",
+        "version_normalized": "0.7.0.0",
+        "source": {
+            "type": "git",
+            "url": "http://github.com/kriswallsmith/Buzz.git",
+            "reference": "v0.7"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/kriswallsmith/Buzz/zipball/v0.7",
+            "reference": "v0.7",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "suggest": {
+            "ext-curl": "*"
+        },
+        "time": "2012-06-25 12:01:38",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Buzz": "lib/"
+            }
+        },
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Kris Wallsmith",
+                "email": "kris.wallsmith@gmail.com",
+                "homepage": "http://kriswallsmith.net/"
+            }
+        ],
+        "description": "Lightweight HTTP client",
+        "homepage": "https://github.com/kriswallsmith/Buzz",
+        "keywords": [
+            "curl",
+            "http client"
+        ]
+    },
+    {
+        "name": "marcw/buzz-service-provider",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/marcw/silex-buzz-extension.git",
+            "reference": "f698ac0259d55a0209b344ac9978f0d6107d920f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/marcw/silex-buzz-extension/zipball/f698ac0259d55a0209b344ac9978f0d6107d920f",
+            "reference": "f698ac0259d55a0209b344ac9978f0d6107d920f",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.2",
+            "kriswallsmith/buzz": ">=0.6"
+        },
+        "time": "2012-06-26 03:10:21",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "MarcW\\Silex\\Provider": "lib"
+            }
+        },
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Marc Weistroff",
+                "email": "marc@weistroff.net",
+                "homepage": "http://marc.weistroff.net"
+            }
+        ],
+        "description": "Silex ServiceProvider for Buzz Http Library",
+        "homepage": "https://github.com/marcw/silex-buzz-extension",
+        "keywords": [
+            "silex",
+            "buzz",
+            "service provider"
+        ]
     }
 ]
