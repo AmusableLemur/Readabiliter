@@ -30,7 +30,7 @@ class ComposerAutoloaderInit
 
         $loader->register();
 
-        require $baseDir . '/vendor/readability/ReadabilityProvider.php';
+        require $baseDir . '/vendor/readability/Provider/ReadabilityProvider.php';
 
         return $loader;
     }

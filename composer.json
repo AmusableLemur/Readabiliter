@@ -6,6 +6,6 @@
         "marcw/buzz-service-provider": "dev-master"
     },
     "autoload": {
-        "files": ["vendor/readability/ReadabilityProvider.php"]
+        "files": ["vendor/readability/Provider/ReadabilityProvider.php"]
     }
 }
