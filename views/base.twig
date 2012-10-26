@@ -3,25 +3,23 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Working on it</title>
+    <title>Readabiliter</title>
     <link href="{{ app.request.basepath }}/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="container">
-        <div class="row">
-            <ul class="nav">
-  <li class="active">
-    <a href="#">Home</a>
-  </li>
-  <li><a href="#">Link</a></li>
-  <li><a href="#">Link</a></li>
-                <li class="divider-vertical">::</li>
-            </ul>
-            <form action="./" class="form-inline" method="post">
-                <input name="link" type="text" class="span10" placeholder="Link to article…" />
-                <button type="submit" class="btn pull-right span2">Archive</button>
-            </form>
+        <div class="row" style="margin-top: 20px">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <a class="brand" href="{{ app.request.basepath }}/">Readabiliter</a>
+                    <form action="{{ path('reader') }}" method="post" class="navbar-form pull-right">
+                        <input type="text" name="url" class="span6" placeholder="Link to article…">
+                        <button type="submit" class="btn btn-info">Readabilitize!</button>
+                    </form>
+                </div>
+            </div>
+            {% block body %}{% endblock %}
         </div>
     </div>
 </body>

@@ -33,13 +33,6 @@ $app['debug'] = true;
 
 $app->register(new Readability\ReadabilityProvider());
 
-$app->register(new Silex\Provider\DoctrineServiceProvider(), array(
-    'db.options' => array(
-        'driver'   => 'pdo_sqlite',
-        'path'     => __DIR__.'/articles.db',
-    ),
-));
-
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/views',
 ));
@@ -47,19 +40,17 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 
 $app->get('/', function(Silex\Application $app) {
-    return $app['twig']->render('index.twig', array(
-        'name' => 'blarg'
-    ));
+    return $app['twig']->render('index.twig');
 })->bind('index');
 
-$app->post('/', function (Request $request) {
-    return new RedirectResponse('/');
-});
-
-$app->get('/article/{id}', function (Silex\Application $app, $id) {
+$app->post('/reader', function (Silex\Application $app, Request $request) {
+	$url = $request->get('url');
+	
     return $app['twig']->render('article.twig', array(
-        'name' => 'blarg'
+        'title' => 'blarg',
+        'content' => 'test',
+        'url' => $request->get('url')
     ));
-})->assert('id', '\d+')->bind('article');
+})->bind('reader');
 
 $app->run();
