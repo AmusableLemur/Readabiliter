@@ -31,7 +31,9 @@ $app = new Silex\Application();
 
 $app['debug'] = true;
 
-$app->register(new Readability\ReadabilityProvider());
+$app->register(new MarcW\Silex\Provider\BuzzServiceProvider());
+
+$app->register(new Readability\Provider\ReadabilityProvider());
 
 $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/views',
@@ -45,10 +47,12 @@ $app->get('/', function(Silex\Application $app) {
 
 $app->post('/reader', function (Silex\Application $app, Request $request) {
 	$url = $request->get('url');
+	$html = $app['buzz']->get($url);
+	$source = $app['readability']($html, $url);
 	
     return $app['twig']->render('article.twig', array(
-        'title' => 'blarg',
-        'content' => 'test',
+        'title' => $source['title'],
+        'content' => $source['content'],
         'url' => $request->get('url')
     ));
 })->bind('reader');

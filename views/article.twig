@@ -2,7 +2,7 @@
 
 {% block body %}
     <legend>
-        <h1>{{ title }} <small>parsed from <a href="{{ url }}">{{ url }}</a></small></h1>
+        <h1>{{ title }}<br><small>parsed from <a href="{{ url }}">{{ url }}</a></small></h1>
     </legend>
-    {{ content }}
+    {{ content | raw }}
 {% endblock %}
